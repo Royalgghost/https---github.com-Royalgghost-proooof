@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>profil</title>
+    <STYle>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #505058;
+        }
+        /* Style pour le conteneur principal */
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* En-tête */
+        
+        header {
+            background-color: red;
+            color: blue;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #333;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        /* Sections */
+        
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border: 4px solid #34df89;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        section h2 {
+            margin-top: 0;
+            border-bottom: 2px solid rgb(15, 136, 51);
+            padding-bottom: 10px;
+        }
+        /* Texte */
+        
+        p {
+            line-height: 1.6;
+        }
+        /* Bordures et arrière-plans pour les sections */
+        
+        .section-primary {
+            background-color: #e9f7ef;
+            border: 4px solid #1c8657;
+        }
+        
+        .section-secondary {
+            background-color: #e3f2fd;
+            border: 4px solid #90caf9;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header {
+                padding: 15px;
+            }
+            section {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            section h2 {
+                font-size: 1em;
+            }
+        }
+    </STYle>
+    <CENTer>
+        <h1>Azzat Nouamane</h1>
+    </CENTer>
+
+    <section>
+        <center>
+            <h2>A propos de moi</h2>
+            <img src="C:\Users\hp1\Downloads\WhatsApp Image 2024-10-27 à 00.26.33_1f74f0a6.jpg" width="100" height="100"></center>
+
+        <center>
+            <p>Azzat Nouamane, 20 ans, j'habite à casa et je suis un étudiant à l'EMSI.</p>
+        </center>
+
+    </section>
+    <CENter></CENter>
+    <section>
+        <H2>Tableau d'Amis</H2>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            td,
+            th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+        <table>
+            <tr>
+                <th>NOM</th>
+                <th>Age</th>
+                <th>Ville</th>
+                <th>Date de naissance</th>
+                <th>Lien</th>
+            </tr>
+            <tr>
+                <td>Aimane hnod</td>
+                <td>20</td>
+                <td>Casablanca</td>
+                <td>2005</td>
+                <td>Aimane.com</td>
+            </tr>
+            <tr>
+                <td>samawi hamza</td>
+                <td>20</td>
+                <td>Casablanca</td>
+                <td>2004</td>
+                <td>samawi.com</td>
+            </tr>
+            <tr>
+                <td>bource aymane</td>
+                <td>43</td>
+                <td>casablanca</td>
+                <td>1981</td>
+                <td>bource.com</td>
+            </tr>
+            <tr>
+                <td>mrgawi youssef</td>
+                <td>20</td>
+                <td>Casablanca</td>
+                <td>1836</td>
+                <td>mrgawi.com</td>
+            </tr>
+
+        </table>
+    </section>
+    <section>
+        <H2>Loisirs et Objectifs</H2>
+        <UL>
+            <li><b>Loisirs :</b></li>
+            <li>Aller au cinema</li>
+            <li> Video games</li>
+        </UL>
+        <ul>
+            <li><b>Objectif:</b></li>
+            Devenir millionaire
+        </ul>
+    </section>
+    <section>
+        <center>
+            <h2>Pour nous contacter</h2>
+            <form id="contactForm">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="button" onclick="validateForm()">Envoyer</button>
+            </form>
+        </center>
+    </section>
+
+</head>
+
+<body>
+    <script>
+        function validateForm() {
+            // Obtenez les valeurs des champs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Vérification des erreurs
+            if (name === '') {
+                alert('Veuillez entrer votre nom.');
+                return;
+            }
+            if (!validateEmail(email)) {
+                alert('Veuillez entrer une adresse e-mail valide.');
+                return;
+            }
+            if (message === '') {
+                alert('Veuillez entrer un message.');
+                return;
+            }
+
+            // Si tout est correct
+            alert('Formulaire soumis avec succès !');
+        }
+
+        // Fonction de validation de l'email
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+
+</html>
